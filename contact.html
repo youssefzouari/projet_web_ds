@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../pages_style/style.css">
+    <script type="text/javascript" src="../scripts/contact.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Me Contacter</h1>
+        <p class="slogan">N'hésitez pas à me laisser un message !</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../pages_html/index.html">Accueil</a></li>
+            <li><a href="../pages_html/parcours.html">Parcours Académique</a></li>
+            <li><a href="../pages_html/competences.html">Compétences</a></li>
+            <li><a href="../pages_html/experiences.html">Expériences</a></li>
+            <li><a href="../pages_html/manifestations.html">Manifestations</a></li>
+            <li><a href="../pages_html/matieres.html">Matières</a></li>
+            <li><a href="../pages_html/passions.html">Passions</a></li>
+            <li><a href="../pages_html/quizz.html">Quizz</a></li>
+            <li><a href="../pages_html/contact.html">Contact</a></li>
+            <li><a href="../pages_html/temoignage.html">Témoignage IIT</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Formulaire de Contact</h2>
+        
+        <form name="contactForm" id="contactForm" method="post" action="">
+            <fieldset>
+                <legend>Informations Personnelles</legend>
+                
+                <label for="nom">Nom <span class="important">*</span></label>
+                <input type="text" id="nom" name="nom" required placeholder="Nom">
+                
+                <label for="prenom">Prénom <span class="important">*</span></label>
+                <input type="text" id="prenom" name="prenom" required placeholder="Prenom">
+                
+                <label for="email">Adresse Email <span class="important">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="Ex: aaaa@email.com">
+                
+                <label for="telephone">Numéro de Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Ex: +216 XX XXX XXX">
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre Message</legend>
+                
+                <label for="objet">Objet du message <span class="important">*</span></label>
+                <select id="objet" name="objet" required>
+                    <option value="">-- Sélectionnez un objet --</option>
+                    <option value="information">Demande d'information</option>
+                    <option value="collaboration">Proposition de collaboration</option>
+                    <option value="stage">Offre de stage</option>
+                    <option value="projet">Proposition de projet</option>
+                    <option value="autre">Autre</option>
+                </select>
+                
+                <label for="message">Message <span class="important">*</span></label>
+                <textarea id="message" name="message" rows="8" required placeholder="Écrivez votre message ici..."></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Préférences de Contact</legend>
+                
+                <p><strong>Comment préférez-vous être contacté(e) ?</strong></p>
+                <input type="radio" id="contact_email" name="preference_contact" value="email" checked>
+                <label for="contact_email">Par Email</label><br>
+                
+                <input type="radio" id="contact_tel" name="preference_contact" value="telephone">
+                <label for="contact_tel">Par Téléphone</label><br>
+                
+                <input type="radio" id="contact_indifferent" name="preference_contact" value="indifferent">
+                <label for="contact_indifferent">Peu importe</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Notifications</legend>
+                
+                <input type="checkbox" id="newsletter" name="newsletter" value="oui">
+                <label for="newsletter">Je souhaite recevoir la newsletter</label><br>
+                
+                <input type="checkbox" id="copie" name="copie" value="oui">
+                <label for="copie">M'envoyer une copie du message</label>
+            </fieldset>
+
+            <div class="centre">
+                <input type="button" value="Envoyer le Message" onclick="validerFormulaire()">
+                <input type="reset" value="Réinitialiser">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Youssef Zouari - Tous droits réservés</p>
+        <p><a href="mailto:youssef.otakou@gmail.com">youssef.otakou@gmail.com</a></p>
+    </footer>
+</body>
+</html>
